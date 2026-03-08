@@ -8,11 +8,18 @@
 
 
 
+answer = 89
 
+while True:
+    user_input = int(input("請輸入1-100的任意整數: "))
+    if user_input < 1 or user_input> 100:
+        print("超出範圍請重新輸入")
+    elif user_input > answer :    
+        print("請輸入更小的數字")
+    elif user_input < answer :
+        print("請輸入更大的數字")    
+    else: 
+        print("恭喜中獎")
+        break
 
-
-
-
-
-
-
+# ctrl+C 強制暫停 優先順序 很重要，一般來說 不會有交換率
