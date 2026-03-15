@@ -11,7 +11,15 @@
 answer = 89
 
 while True:
-    user_input = int(input("請輸入1-100的任意整數: "))
+    try:
+        user_input = int(input("請輸入1~100的數字: "))
+    except ValueError:
+        print("請輸入數字")
+        continue
+
+
+    # user_input = int(input("請輸入1-100的任意整數: "))
+    
     if user_input < 1 or user_input> 100:
         print("超出範圍請重新輸入")
     elif user_input > answer :    
